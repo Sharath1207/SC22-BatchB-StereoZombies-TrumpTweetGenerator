@@ -6,6 +6,9 @@ If you have any questions, feel free to open an issue on [Github](https://github
 ### Video Guide
 [![Deploy a Web Project with Flask](https://img.youtube.com/vi/JUb-PpejA7w/0.jpg)](https://youtu.be/JUb-PpejA7w "Deploy a Web Project with Flask")
 
+![image](https://user-images.githubusercontent.com/106123882/179128143-85c7208d-5faa-4945-b953-938180b0ac71.png)
+
+
 This guide covers how you can quickly deploy most projects with the [Flask](https://flask.palletsprojects.com/) framework and our omni scaffold.
 
 ### Quickstart Guide for Local Development
