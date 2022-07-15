@@ -1,3 +1,469 @@
-<h2>
-    The index works.
-</h2>
+<!DOCTYPE html>  
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> Trump Tweets Generator | AI Camp </title>
+      <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="statuc/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" media="screen">
+      </head>
+    <body id="page-top">
+      <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-30 u-size-xs-60" style="background-image: url({{ url_for('static', filename='img/trumptwitterpage1.png') }});background-size: cover; background-repeat: no-repeat;background-size:2000px 900px;">
+
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#Keyconcepts">Keyconcepts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Model</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timelines">Timelines</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#data">Data Cleaning</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item "><a class="nav-link" href="https://www.ai-camp.org/">AI CAMP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+         <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading"> Generate Fake Trump Tweets!</div>
+                <div class="masthead-heading text-uppercase"> Try our bot here!</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Try it now!</a>
+            </div>
+        </header>
+      </div>
+
+      <!-- Keyconcepts-->
+        <section class="page-section" id="Keyconcepts">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">
+            Key Concepts
+          </h2>
+
+          <h3 class="section-subheading text-muted">
+            Discover the concepts of machine learning, text generation, and web development!
+          </h3>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-4">
+
+            <h4 class="my-3">
+              NLP
+            </h4>
+
+            <p class="text-muted">
+              Natural Language Processing (NLP) is a subset of computer science that involves teaching AI models to process, understand, and communicate in human language.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+
+            <h4 class="my-3">
+              GPT
+            </h4>
+
+            <p class="text-muted">
+              Generated Pre-trained Transformer (GPT) is a language model that processes and generates text. The latest versions are GPT-2 and GPT-3.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+
+            <h4 class="my-3">
+              AITEXTGEN
+            </h4>
+
+            <p class="text-muted">
+              AiTextgen is a Python-based tool used for training AI models and generating text using GPT-2. With preset parameters of 124M, 355M, and 744M, aitextgen is able to train and generate text at a relatively quick pace.
+            </p>
+          </div>
+          <div class="col-md-4">
+
+            <h4 class="my-3">
+              FLASK
+            </h4>
+
+            <p class="text-muted">
+               Flask is a Python-based web framework that simplifies the process of backend web development. Flask is a microframework that is simple to use because it provides the tools, libraries, and technologies to build a web application.
+            </p>
+          </div>
+            <div class="col-md-4">
+
+            <h4 class="my-3">
+              HTML
+            </h4>
+
+            <p class="text-muted">
+               HyperText Markup Language (HTML) is a programming language used to create the frontend (what a user is able to see) of a document designed for display in a web browser.
+            </p>
+          </div>
+            <div class="col-md-4">
+
+            <h4 class="my-3">
+              CSS
+            </h4>
+
+            <p class="text-muted">
+               Cascading Style Sheets (CSS) is used to create the display of a website. It can be assisted by HTML and JavaScript to make the website more interactive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- Model-->
+      <section class="page-section bg-light" id="services">
+        <div class="container px-4 px-lg-5 text-center">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-5">
+             <h2 class="text-light2">
+               Test the AI Model Here!
+                      </h2>
+                      <p class="lead mb-5"><strong> Submit a prompt and AI will generate a tweet</strong></p>
+            <form action="{{url_for('generate_text')}}" method="POST" source="custom" name="form-1" >
+                          <div class="form-group">
+                            <textarea class="form-control-lg" rows="4" cols="50" placeholder="What's Happening?" required="" id="text_gen_input" style='width: 460px; height: 200px;'name="prompt"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-secondary" id="text_gen_button" href="#services">Generate</button>
+                          </div>
+                        </form>
+                      <br>
+                    </div>
+
+      <div class="container">
+  <img src="{{ url_for('static', filename='img/trumptwitter2line.jpg') }}" alt="" style="width:55%;">
+  <div class="bottom-left"></div>
+  <div class="top-left"></div>
+  <div class="top-right"></div>
+  <div class="bottom-right"></div>
+  <div class="centered">{{generated}}</div>
+</div>
+</div>
+
+            </div>
+        </section>
+
+      <!-- Team-->
+        <section class="page-section bg-light" id="team">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">
+            The Team
+          </h2>
+
+          <h3 class="section-subheading text-muted">
+            Meet the brains behind the Trump AI model!
+          </h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img alt="..." class="mx-auto rounded-circle" src=
+              "{{ url_for('static', filename='img/pdro.jpg')}}">
+              <h4>
+                Pedro Silva
+              </h4>
+
+              <p class="text-muted">
+                "Wants desmos to be a paid subscription service because he wasted a lot of money on a fancy graphing calculator."
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img alt="..." class="mx-auto rounded-circle" src=
+              "{{ url_for('static', filename='img/bassproshops.png')}}"> 
+              <h4>
+                Mathew Bass
+              </h4>
+              <p class="text-muted">
+                "An incoming senior who enjoys to play tennis and read."
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img alt="..." class="mx-auto rounded-circle" src=
+              "{{ url_for('static', filename='img/swiss_cheese.png')}}">
+              <h4>
+                Zachary Swiss
+              </h4>
+
+              <p class="text-muted">
+                "Knows how to destroy someones pc, anarchy 101"
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img alt="..." class="mx-auto rounded-circle" src=
+              "{{ url_for('static', filename='img/galvinize.jpg')}}"> 
+              <h4>
+                Calvin Yang
+              </h4>
+              <p class="text-muted">
+                "Likes to play video games and touching grass"
+              </p>
+
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img alt="..." class="mx-auto rounded-circle" src=
+              "{{ url_for('static', filename='img/alex.png')}}"> 
+              <h4>
+                Alex Yang
+              </h4>
+              <p class="text-muted">
+                "Goes to middle school and believes Calvin is fat (they are brothers so its ok to body shame)"
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        
+        </div>
+      </div>
+    </section>
+
+      <!-- Timelines-->
+        <section class="page-section" id="timelines">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">
+            TIMELINES
+          </h2>
+
+          <h3 class="section-subheading text-muted">
+            Our journey as a team.
+          </h3>
+        </div>
+
+        <ul class="timeline">
+          <li>
+        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='img/pythagoras.png')}}" alt="..." /></div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>
+                  The First Week
+                </h4>
+
+              <h6 class="subheading">
+                 June 27th - July 1st
+                </h6>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+                  During the first week, we learned the foundations of Python and began formulating ideas for our project.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+           <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='img/machinations1.png')}}" alt="..." /></div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>
+                  The Second Week
+                </h4>
+
+                <h6 class="subheading">
+                  July 5th  - July 8th
+                </h6>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+                  During the second week, we finished learning about Python and proceeded to clean a dataset containing Trump's tweets using regular expressions, and we trained the AI to generate tweet-like text based on the data.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='img/globe-512.png')}}" alt="..." /></div>
+
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>
+                  The Final Week
+                </h4>
+
+                <h6 class="subheading">
+                  July 11th - July 15th
+                </h6>
+              </div>
+
+              <div class="timeline-body">
+                <p class="text-muted">
+                  During the 3rd and final week, we built the frontend using HTML, CSS, and began deployment of the product.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+      <!--Data Cleaning-->
+                  
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="data">
+          <div class="text-center">
+                    <h2 class="section-heading text-uppercase">DATA CLEANING</h2>
+                    <h3 class="section-subheading text-muted">This is how we were able to filter and clean the data!<br><br></h3>
+                </div>
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static', filename='img/Cleaning1.png')}}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>CLEANING THE DATA</h4>
+                            <p class="text-black-50 mb-0">The Trump AI was trained using a dataset consisting of Trump Twitter Archive data. The dataset contained several emojis, hashtags, mentions and other unwanted characters. Using regular expressions, we were able to clean the dataset and use it to train the model more effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='img/Before1.png')}}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-light text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-black">BEFORE</h4>
+                                    <p class="mb-0 text-black-50">Before, the dataset contained several hyperlinks, hashtags, and mentions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static', filename='img/After1.png')}}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-light text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-black">AFTER</h4>
+                                  <p class="mb-0 text-black-50">After cleaning, the dataset looks far more organized! With the cleaned dataset, we trained the model to speak more coherently!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+      <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">We are open to connect!</h3>
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; AI Camp Summer Project Website 2022</div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
