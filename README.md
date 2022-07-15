@@ -5,6 +5,7 @@ If you have any questions, feel free to open an issue on [Github](https://github
 
 ![image](https://user-images.githubusercontent.com/106123882/179128143-85c7208d-5faa-4945-b953-938180b0ac71.png)
 
+https://docs.google.com/presentation/d/1x-asr5NxFj9R6draZCGt47jmCZOAmW9uZyUb3l5hmfc/edit#slide=id.p
 
 This guide covers how you can quickly deploy most projects with the [Flask](https://flask.palletsprojects.com/) framework and our omni scaffold.
 
